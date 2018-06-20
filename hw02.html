@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<head> 
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="textml; charset=gb2312" /> 
+  <title>九九乘法表</title> 
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<style type="text/css">
+  table{ 
+    width:600px;   
+    border-collapse:separate;
+    display: block;
+    } 
+  td{ 
+    border:#000000 1px solid;
+    text-align: center; 
+  } 
+</style> 
+<body> 
+  <div>
+    <span>请输入n的值：</span>
+    <input class="input" type="text" name="" id="input">
+    <input type="submit" name="" value="提交" onclick="NumberIn()">
+  </div>
+  <script type="text/javascript"> 
+   function NumberIn(){
+        var NumberInput=$("input").val();
+        document.write("<table>"); 
+        for (var x = 1; x <= NumberInput; x++) 
+        { 
+          document.write("<tr>");
+          for (var y = 1; y <= x; y++)
+          { 
+            document.write("<td>"+y+"x"+x+"="+y*x+"</td>");
+          }                          
+          document.write("</tr>"); 
+        } 
+        document.write("</table>");  
+        $("td").css('border','1px solid #000')
+      }
+  </script> 
+ 
+</body> 
+<ml>
